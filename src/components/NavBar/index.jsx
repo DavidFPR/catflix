@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import catflixLight from '/public/assets/img/logo/catflix-light.png';
+import catflixLight from '/assets/img/logo/catflix-light.png';
 
 const NavStyled = styled.nav`
   width: 100%;

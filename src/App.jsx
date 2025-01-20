@@ -1,30 +1,18 @@
-import styled from 'styled-components';
 import './App.css';
-import FooterNav from './components/FooterNav';
-import NavBar from './components/NavBar';
-import VideoCategory from './components/VideoCategory';
-import ChipContainer from './components/ChipContainer';
-
-const MainContainer = styled.div`
-  box-sizing: border-box;
-  width: 100%;
-  height: auto;
-  padding: 10vh 18px;
-  overflow: scroll;
-`;
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Inicio from './pages/Inicio/Inicio';
+import Favoritos from './pages/Favoritos/Favoritos';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
-    <>
-      <NavBar />
-      <MainContainer>
-        <ChipContainer />
-        <VideoCategory />
-        <VideoCategory />
-        <VideoCategory />+++++
-      </MainContainer>
-      <FooterNav />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Inicio />} />
+        <Route path="/favoritos" element={<Favoritos />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 }
 

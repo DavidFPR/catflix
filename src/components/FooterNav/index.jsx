@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import HomeIcon from '@mui/icons-material/Home';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -37,7 +38,9 @@ const FooterNav = () => {
     <SectionStyled>
       <div>
         <ButtonStyled>
-          <HomeIcon fontSize="large" />
+          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <HomeIcon fontSize="large" />
+          </Link>{' '}
         </ButtonStyled>
       </div>
       <div>
@@ -47,7 +50,12 @@ const FooterNav = () => {
       </div>
       <div>
         <ButtonStyled>
-          <FavoriteIcon fontSize="large" />
+          <Link
+            to="/favoritos"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            <FavoriteIcon fontSize="large" />
+          </Link>
         </ButtonStyled>
       </div>
     </SectionStyled>
