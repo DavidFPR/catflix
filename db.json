@@ -1,18 +1,6 @@
 {
   "categories": [
     {
-      "name": "Dumb Cats",
-      "color": "#990000",
-      "videos": [
-        {
-          "title": "Dumb Cat",
-          "youtubeLink": "https://www.youtube.com/watch?v=def456",
-          "youtubeThumb": "https:picsum.photos/200"
-        }
-      ]
-    },
-
-    {
       "name": "Funny Cats",
       "color": "#FFD700",
       "videos": [

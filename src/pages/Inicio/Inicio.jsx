@@ -11,6 +11,10 @@ const MainContainer = styled.div`
   height: auto;
   padding: 10vh 18px;
   overflow: scroll;
+
+  @media (min-width: 1024px) {
+    overflow: hidden;
+  }
 `;
 
 const Inicio = () => {

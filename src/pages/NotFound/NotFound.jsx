@@ -23,6 +23,18 @@ const NoEncontradoContainer = styled.div`
   & img {
     width: 95%;
   }
+
+  @media (min-width: 768px) {
+    & img {
+      width: 50%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    & img {
+      width: 30%;
+    }
+  }
 `;
 
 const NotFound = () => {

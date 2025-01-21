@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import catflixLight from '/assets/img/logo/catflix-light.png';
 
 const NavStyled = styled.nav`
@@ -13,19 +14,48 @@ const NavStyled = styled.nav`
   top: 0;
   z-index: 99;
 
+  @media (min-width: 1024px) {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
   & img {
     width: 120px;
+    margin-left: 20px;
+  }
+`;
 
+const LinksContainer = styled.div`
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    gap: 20px;
+  }
+
+  & a {
+    color: var(--main-text-color);
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 50px;
+  }
+
+  & a:hover {
+    color: var(--highlight-text-color);
   }
 `;
 
 const NavBar = () => {
   return (
-    <>
-      <NavStyled>
-        <img src={catflixLight} alt="" />
-      </NavStyled>
-    </>
+    <NavStyled>
+      <Link to="/">
+        <img src={catflixLight} alt="Catflix Logo" />
+      </Link>
+      <LinksContainer>
+        <Link to="/favoritos">Favoritos</Link>
+        <Link to="/nuevo-video">Nuevo Video</Link>
+      </LinksContainer>
+    </NavStyled>
   );
 };
 

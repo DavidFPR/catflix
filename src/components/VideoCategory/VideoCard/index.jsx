@@ -2,6 +2,8 @@ import { useFavorites } from '../../../FavoritesContext.jsx';
 import styled from 'styled-components';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import VideoPlayer from '../../VideoPlayer/index.jsx';
+import { useState } from 'react';
 
 const CardStyled = styled.article`
   box-sizing: border-box;
@@ -19,6 +21,15 @@ const CardStyled = styled.article`
     border-radius: 8px 8px 0 0;
     height: 70%;
     width: 100%;
+    cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    min-width: 48%; /* Adjust width for tablets and small desktops */
+  }
+
+  @media (min-width: 1024px) {
+    min-width: 20%; /* Adjust width for larger desktops */
   }
 `;
 
@@ -35,6 +46,7 @@ const TitleStyled = styled.h2`
   font-size: 18px;
   color: ${(props) => props.$titleColor || '#ff80ab'}; /* Dynamic title color */
   margin-left: 12px;
+  cursor: pointer;
 `;
 
 const ButtonStyled = styled.button`
@@ -59,6 +71,7 @@ const FavoriteButton = ({ isFavorite, onClick }) => (
 
 const VideoCard = ({ video, categoryColor }) => {
   const { favorites, addFavorite, removeFavorite } = useFavorites();
+  const [isPlayerOpen, setIsPlayerOpen] = useState(false);
 
   const isFavorite = favorites.some(
     (fav) => fav.youtubeLink === video.youtubeLink
@@ -72,15 +85,27 @@ const VideoCard = ({ video, categoryColor }) => {
     }
   };
 
+  const handleOpenPlayer = () => {
+    console.log('Thumbnail or title clicked');
+    setIsPlayerOpen(true);
+  };
+
+  const handleClosePlayer = () => {
+    setIsPlayerOpen(false);
+  };
+
   return (
     <CardStyled style={{ borderColor: categoryColor }}>
-      <img src={video.youtubeThumb} alt={video.title} />
+      <img src={video.youtubeThumb} alt={video.title} onClick={handleOpenPlayer} />
       <CardInfo>
-        <TitleStyled style={{ color: categoryColor }}>
+        <TitleStyled style={{ color: categoryColor }} onClick={handleOpenPlayer}>
           {video.title}
         </TitleStyled>
         <FavoriteButton isFavorite={isFavorite} onClick={handleFavoriteClick} />
       </CardInfo>
+      {isPlayerOpen && (
+        <VideoPlayer videoId={video.youtubeLink.split('v=')[1]} onClose={handleClosePlayer} />
+      )}
     </CardStyled>
   );
 };

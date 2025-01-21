@@ -15,6 +15,12 @@ const FavoritosContainer = styled.div`
   font-family: var(--main-font);
   gap: 18px;
 
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   & h1 {
     color: var(--highlight-text-color);
     text-align: center;
@@ -28,24 +34,31 @@ const FavoritosContainer = styled.div`
     font-size: 32px;
   }
 `;
+
+const HeaderContainer = styled.div`
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+`;
+
 const Favoritos = () => {
   const { favorites } = useFavorites();
 
   return (
     <FavoritosContainer>
       <NavBar />
-      <h1>Encuentra aquí tus videos favoritos</h1>
-      {favorites.length === 0 ? (
-        <p>No hay videos favoritos.</p>
-      ) : (
+      <HeaderContainer>
+        <h1>Encuentra aquí tus videos favoritos</h1>
+        {favorites.length === 0 && <p>No hay videos favoritos.</p>}
+      </HeaderContainer>
+      {favorites.length > 0 &&
         favorites.map((video) => (
           <VideoCard
             key={video.youtubeLink}
             video={video}
             categoryColor="#FFD700"
           />
-        ))
-      )}
+        ))}
       <FooterNav />
     </FavoritosContainer>
   );

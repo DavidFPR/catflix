@@ -22,6 +22,9 @@ const SectionStyled = styled.section`
     justify-content: space-between;
     align-items: center;
   }
+  @media (min-width: 1024px) {
+    display: none;
+  }
 `;
 
 const ButtonStyled = styled.button`

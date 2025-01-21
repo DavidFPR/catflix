@@ -2,12 +2,17 @@ import { useEffect, useState } from 'react';
 import { Chip } from '@mui/material';
 import styled from 'styled-components';
 
-const ChipContainerStyled = styled.section`
+const ChipContainerStyled = styled.div`
   display: flex;
-  width: 100%;
-  gap: 12px;
-  overflow: scroll;
-  margin-top: 24px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 10px;
+  margin: 5vh 0;
+
+  @media (min-width: 1024px) {
+    justify-content: flex-end;
+    overflow-x: hidden;
+  }
 `;
 
 const ChipContainer = ({ activeCategory, setActiveCategory }) => {
