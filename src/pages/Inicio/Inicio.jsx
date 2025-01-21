@@ -22,7 +22,7 @@ const Inicio = () => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/videos')
+    fetch('https://my-json-server.typicode.com/DavidFPR/catflix-api/videos')
       .then((res) => res.json())
       .then((data) => setVideos(data));
   }, []);

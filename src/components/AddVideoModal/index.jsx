@@ -89,7 +89,7 @@ const AddVideoModal = ({ isOpen, onClose, onVideoAdded }) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/categories')
+    fetch('https://my-json-server.typicode.com/DavidFPR/catflix-api/categories')
       .then((res) => res.json())
       .then((data) => setCategories(data));
   }, []);
@@ -110,7 +110,7 @@ const AddVideoModal = ({ isOpen, onClose, onVideoAdded }) => {
       categoryId: selectedCategory.id,
     };
 
-    fetch(`http://localhost:3000/videos`, {
+    fetch(`https://my-json-server.typicode.com/DavidFPR/catflix-api/videos`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -158,9 +158,13 @@ const AddVideoModal = ({ isOpen, onClose, onVideoAdded }) => {
             onChange={(e) => setCategory(e.target.value)}
             required
           >
-            <option value="" disabled>Select Category</option>
+            <option value="" disabled>
+              Select Category
+            </option>
             {categories.map((cat) => (
-              <option key={cat.name} value={cat.name}>{cat.name}</option>
+              <option key={cat.name} value={cat.name}>
+                {cat.name}
+              </option>
             ))}
           </ModalSelect>
           <ModalButton type="submit">Add Video</ModalButton>

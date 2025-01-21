@@ -5,7 +5,7 @@ const VideoCategories = ({ activeCategory, videos }) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/categories")
+    fetch("https://my-json-server.typicode.com/DavidFPR/catflix-api/categories")
       .then((res) => res.json())
       .then((data) => setCategories(data));
   }, []);

@@ -1,0 +1,171 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Gatitos",
+      "color": "#FF6347"
+    },
+    {
+      "id": "2",
+      "name": "Gatos y Animales",
+      "color": "#FF1493"
+    },
+    {
+      "id": "3",
+      "name": "Fails de Gatos",
+      "color": "#00BFFF"
+    },
+    {
+      "id": "4",
+      "name": "Gatos Traviesos",
+      "color": "#32CD32"
+    },
+    {
+      "id": "5",
+      "name": "Gatos Random",
+      "color": "#9D00FF"
+    }
+  ],
+  "videos": [
+    {
+      "id": "a1b2",
+      "title": "20 minutos de gatitos",
+      "youtubeLink": "https://www.youtube.com/watch?v=y0sF5xhGreA",
+      "youtubeThumb": "https://img.youtube.com/vi/y0sF5xhGreA/0.jpg",
+      "categoryId": "1"
+    },
+    {
+      "id": "a3b4",
+      "title": "15 minutos de los gatitos más lindos",
+      "youtubeLink": "https://www.youtube.com/watch?v=co47u19cbds",
+      "youtubeThumb": "https://img.youtube.com/vi/co47u19cbds/0.jpg",
+      "categoryId": "1"
+    },
+    {
+      "id": "a5c6",
+      "title": "Mamá con 4 gatitos",
+      "youtubeLink": "https://www.youtube.com/watch?v=Mj19KE_HV1E",
+      "youtubeThumb": "https://img.youtube.com/vi/Mj19KE_HV1E/0.jpg",
+      "categoryId": "1"
+    },
+    {
+      "id": "a7d8",
+      "title": "Gatito come salmón con música de Doom",
+      "youtubeLink": "https://www.youtube.com/watch?v=SLEBlJ9DTAI",
+      "youtubeThumb": "https://img.youtube.com/vi/SLEBlJ9DTAI/0.jpg",
+      "categoryId": "1"
+    },
+    {
+      "id": "b1c2",
+      "title": "Loro molestando a gato",
+      "youtubeLink": "https://www.youtube.com/watch?v=NOpS4qGILyY",
+      "youtubeThumb": "https://img.youtube.com/vi/NOpS4qGILyY/0.jpg",
+      "categoryId": "2"
+    },
+    {
+      "id": "b3d4",
+      "title": "Gato durmiendo con un conejo",
+      "youtubeLink": "https://www.youtube.com/watch?v=AHKLtpCH2zA",
+      "youtubeThumb": "https://img.youtube.com/vi/AHKLtpCH2zA/0.jpg",
+      "categoryId": "2"
+    },
+    {
+      "id": "b5e6",
+      "title": "Gata muestra sus gatitos a un perro",
+      "youtubeLink": "https://www.youtube.com/watch?v=N2hssAyomdU",
+      "youtubeThumb": "https://img.youtube.com/vi/N2hssAyomdU/0.jpg",
+      "categoryId": "2"
+    },
+    {
+      "id": "b7f8",
+      "title": "Un gato y una nutria son los mejores amigos",
+      "youtubeLink": "https://www.youtube.com/watch?v=PkstoU808B0",
+      "youtubeThumb": "https://img.youtube.com/vi/PkstoU808B0/0.jpg",
+      "categoryId": "2"
+    },
+    {
+      "id": "c1d2",
+      "title": "Compilación de fails de gatos",
+      "youtubeLink": "https://www.youtube.com/watch?v=DHfRfU3XUEo",
+      "youtubeThumb": "https://img.youtube.com/vi/DHfRfU3XUEo/0.jpg",
+      "categoryId": "3"
+    },
+    {
+      "id": "c3e4",
+      "title": "Gato se resbala en la nieve",
+      "youtubeLink": "https://www.youtube.com/watch?v=5d7aruKYkKs",
+      "youtubeThumb": "https://img.youtube.com/vi/5d7aruKYkKs/0.jpg",
+      "categoryId": "3"
+    },
+    {
+      "id": "c5f6",
+      "title": "Gatos asustados por máscara de gato",
+      "youtubeLink": "https://www.youtube.com/watch?v=WpC6HIXGOxI",
+      "youtubeThumb": "https://img.youtube.com/vi/WpC6HIXGOxI/0.jpg",
+      "categoryId": "3"
+    },
+    {
+      "id": "c7g8",
+      "title": "Videos divertidos de gatos",
+      "youtubeLink": "https://www.youtube.com/watch?v=zgiDgPh-sik",
+      "youtubeThumb": "https://img.youtube.com/vi/zgiDgPh-sik/0.jpg",
+      "categoryId": "3"
+    },
+    {
+      "id": "d1e2",
+      "title": "Gato se arrepiente de morder",
+      "youtubeLink": "https://www.youtube.com/watch?v=KVexDDybJEw",
+      "youtubeThumb": "https://img.youtube.com/vi/KVexDDybJEw/0.jpg",
+      "categoryId": "4"
+    },
+    {
+      "id": "d3f4",
+      "title": "Gato destruye el techo de la casa",
+      "youtubeLink": "https://www.youtube.com/watch?v=72HEa-ZDz4k",
+      "youtubeThumb": "https://img.youtube.com/vi/72HEa-ZDz4k/0.jpg",
+      "categoryId": "4"
+    },
+    {
+      "id": "d5g6",
+      "title": "Gatitos derribando cosas con música clásica",
+      "youtubeLink": "https://www.youtube.com/watch?v=09CC-dYDNMQ",
+      "youtubeThumb": "https://img.youtube.com/vi/09CC-dYDNMQ/0.jpg",
+      "categoryId": "4"
+    },
+    {
+      "id": "d7h8",
+      "title": "Gatitos robando comida",
+      "youtubeLink": "https://www.youtube.com/watch?v=ZtvFASYaBPI",
+      "youtubeThumb": "https://img.youtube.com/vi/ZtvFASYaBPI/0.jpg",
+      "categoryId": "4"
+    },
+    {
+      "id": "e1f2",
+      "title": "Gato en una pecera",
+      "youtubeLink": "https://www.youtube.com/watch?v=9FjGP4t2zKY",
+      "youtubeThumb": "https://img.youtube.com/vi/9FjGP4t2zKY/0.jpg",
+      "categoryId": "5"
+    },
+    {
+      "id": "e3g4",
+      "title": "Gatito patriota ruso",
+      "youtubeLink": "https://www.youtube.com/watch?v=gLn3BOokmDU",
+      "youtubeThumb": "https://img.youtube.com/vi/gLn3BOokmDU/0.jpg",
+      "categoryId": "5"
+    },
+    {
+      "id": "e5h6",
+      "title": "Gatitos asustándose solos",
+      "youtubeLink": "https://www.youtube.com/watch?v=t7DR_kFcAik",
+      "youtubeThumb": "https://img.youtube.com/vi/t7DR_kFcAik/0.jpg",
+      "categoryId": "5"
+    },
+    {
+      "id": "e7i8",
+      "title": "Momentos inexplicables de gatos",
+      "youtubeLink": "https://www.youtube.com/watch?v=VRvmn2WA0Q8",
+      "youtubeThumb": "https://img.youtube.com/vi/VRvmn2WA0Q8/0.jpg",
+      "categoryId": "5"
+    }
+  ]
+}
