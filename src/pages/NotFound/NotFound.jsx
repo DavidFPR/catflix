@@ -13,7 +13,7 @@ const NoEncontradoContainer = styled.div`
   align-items: center;
 
   & h1 {
-    color: coral;
+    color: var(--highlight-text-color);
     text-align: center;
     font-family: var(--secondary-font);
     font-weight: bold;

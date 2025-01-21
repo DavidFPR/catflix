@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import HomeIcon from '@mui/icons-material/Home';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -28,36 +28,33 @@ const ButtonStyled = styled.button`
   background-color: transparent;
   border: none;
 
-  & :first-child {
-    color: #eaeaea;
-  }
 `;
 
 const FooterNav = () => {
+  const location = useLocation();
+  const highlightColor = '#FF5722';
+
   return (
     <SectionStyled>
       <div>
         <ButtonStyled>
-          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Link to="/" style={{ textDecoration: 'none', color: location.pathname === '/' ? highlightColor : '#eaeaea' }}>
             <HomeIcon fontSize="large" />
-          </Link>{' '}
-        </ButtonStyled>
-      </div>
-      <div>
-        <ButtonStyled>
-          <AddCircleIcon fontSize="large" />
-        </ButtonStyled>
-      </div>
-      <div>
-        <ButtonStyled>
-          <Link
-            to="/favoritos"
-            style={{ textDecoration: 'none', color: 'inherit' }}
-          >
-            <FavoriteIcon fontSize="large" />
           </Link>
         </ButtonStyled>
       </div>
+      <div>
+        <ButtonStyled>
+          <AddCircleIcon fontSize="large" style={{color: '#eaeaea'}}/>
+        </ButtonStyled>
+      </div>
+      <div>
+        <ButtonStyled>
+          <Link to="/favoritos" style={{ textDecoration: 'none', color: location.pathname === '/favoritos' ? highlightColor : '#eaeaea' }}>
+            <FavoriteIcon fontSize="large" />
+          </Link>
+        </ButtonStyled>
+      </div>  
     </SectionStyled>
   );
 };
