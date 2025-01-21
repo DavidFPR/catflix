@@ -8,8 +8,35 @@ const CreateVideo = ({ isOpen, onClose, categories, onCreate }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onCreate({ title, category, thumbnail, videoSource });
-        onClose();
+        const selectedCategory = categories.find((cat) => cat.name === category);
+        console.log('Selected category:', selectedCategory); // Debugging line
+
+        if (!selectedCategory) {
+            console.error('Category not found');
+            return;
+        }
+
+        const newVideo = {
+            title,
+            youtubeLink: videoSource,
+            youtubeThumb: thumbnail,
+        };
+
+        // Update the category object with the new video
+        const updatedCategory = {
+            ...selectedCategory,
+            videos: [...selectedCategory.videos, newVideo],
+        };
+
+        fetch(`http://localhost:3000/categories/${selectedCategory.id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(updatedCategory),
+        }).then(() => {
+            onClose();
+        });
     };
 
     if (!isOpen) return null;
@@ -38,7 +65,7 @@ const CreateVideo = ({ isOpen, onClose, categories, onCreate }) => {
                         >
                             <option value="">Select Category</option>
                             {categories.map((cat) => (
-                                <option key={cat} value={cat}>{cat}</option>
+                                <option key={cat.name} value={cat.name}>{cat.name}</option>
                             ))}
                         </select>
                     </div>

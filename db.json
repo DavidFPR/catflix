@@ -1,52 +1,49 @@
 {
   "categories": [
     {
+      "id": "1",
       "name": "Funny Cats",
-      "color": "#FFD700",
-      "videos": [
-        {
-          "title": "Parrot Annoys Cat",
-          "youtubeLink": "https://www.youtube.com/watch?v=NOpS4qGILyY",
-          "youtubeThumb": "https://img.youtube.com/vi/NOpS4qGILyY/0.jpg"
-        },
-        {
-          "title": "Talking Cats",
-          "youtubeLink": "https://www.youtube.com/watch?v=def456",
-          "youtubeThumb": "https://img.youtube.com/vi/def456/hqdefault.jpg"
-        }
-      ]
+      "color": "#FFD700"
     },
     {
+      "id": "2",
       "name": "Cute Cats",
-      "color": "#FF69B4",
-      "videos": [
-        {
-          "title": "Kittens Playing",
-          "youtubeLink": "https://www.youtube.com/watch?v=ghi789",
-          "youtubeThumb": "https://img.youtube.com/vi/ghi789/hqdefault.jpg"
-        },
-        {
-          "title": "Cat Sleeping Moments",
-          "youtubeLink": "https://www.youtube.com/watch?v=jkl012",
-          "youtubeThumb": "https://img.youtube.com/vi/jkl012/hqdefault.jpg"
-        }
-      ]
+      "color": "#FF69B4"
     },
     {
+      "id": "3",
       "name": "Hero Cats",
-      "color": "#1E90FF",
-      "videos": [
-        {
-          "title": "Cat Saves the Day",
-          "youtubeLink": "https://www.youtube.com/watch?v=mno345",
-          "youtubeThumb": "https://img.youtube.com/vi/mno345/hqdefault.jpg"
-        },
-        {
-          "title": "Brave Cat Rescue",
-          "youtubeLink": "https://www.youtube.com/watch?v=pqr678",
-          "youtubeThumb": "https://img.youtube.com/vi/pqr678/hqdefault.jpg"
-        }
-      ]
+      "color": "#1E90FF"
+    }
+  ],
+  "videos": [
+    {
+      "id": "3290",
+      "title": "Happy Cat",
+      "youtubeLink": "youtube.com/watch?v=G6neeH3VBfQ",
+      "youtubeThumb": "https://picsum.photos/200",
+      "categoryId": "1"
+    },
+    {
+      "id": "0bc9",
+      "title": "cats",
+      "youtubeLink": "outube.com/watch?v=G6neeH3VBfQ",
+      "youtubeThumb": "https://picsum.photos/200",
+      "categoryId": "2"
+    },
+    {
+      "id": "7c1b",
+      "title": "asdfasd",
+      "youtubeLink": "asdfads",
+      "youtubeThumb": "asdfasd",
+      "categoryId": "3"
+    },
+    {
+      "id": "c9f4",
+      "title": "asdfasd",
+      "youtubeLink": "asdfasd",
+      "youtubeThumb": "asdfasd",
+      "categoryId": "2"
     }
   ]
 }

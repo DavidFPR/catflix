@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useEffect, useState } from 'react';
 import VideoCard from './VideoCard'; // Assuming you have a VideoCard component
 
 const CategorySection = styled.section`
@@ -40,17 +41,32 @@ const VideoSwiper = styled.div`
     overflow-x: hidden;
     gap: 48px;
     max-height: none;
+    justify-content: flex-start;
   }
 `;
 
 const VideoCategory = ({ category }) => {
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    // Fetch the videos and filter by categoryId
+    fetch('http://localhost:3000/videos')
+      .then((res) => res.json())
+      .then((data) => {
+        const filteredVideos = data.filter((video) => video.categoryId === category.id);
+        setVideos(filteredVideos);
+      });
+  }, [category.id]); // Ensure this updates whenever category changes
+
   return (
     <CategorySection>
-      <CategoryChip style={{ backgroundColor: category.color }}>
-        <h2>{category.name}</h2>
-      </CategoryChip>
+      {videos.length > 0 && (
+        <CategoryChip style={{ backgroundColor: category.color }}>
+          <h2>{category.name}</h2>
+        </CategoryChip>
+      )}
       <VideoSwiper>
-        {category.videos.map((video) => (
+        {videos.map((video) => (
           <VideoCard
             key={video.youtubeLink}
             video={video}

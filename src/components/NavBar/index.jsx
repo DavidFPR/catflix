@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import catflixLight from '/assets/img/logo/catflix-light.png';
+import AddVideoModal from '../AddVideoModal';
+import { useState } from 'react';
 
 const NavStyled = styled.nav`
   width: 100%;
@@ -43,19 +45,44 @@ const LinksContainer = styled.div`
   & a:hover {
     color: var(--highlight-text-color);
   }
+
+  & button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: var(--main-text-color);
+    margin-right: 40px;
+  }
+
+  & button:hover {
+    color: var(--highlight-text-color);
+  }
 `;
 
 const NavBar = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <NavStyled>
-      <Link to="/">
-        <img src={catflixLight} alt="Catflix Logo" />
-      </Link>
-      <LinksContainer>
-        <Link to="/favoritos">Favoritos</Link>
-        <Link to="/nuevo-video">Nuevo Video</Link>
-      </LinksContainer>
-    </NavStyled>
+    <>
+      <NavStyled>
+        <Link to="/">
+          <img src={catflixLight} alt="Catflix Logo" />
+        </Link>
+        <LinksContainer>
+          <Link to="/favoritos">Favoritos</Link>
+          <button onClick={handleOpenModal}>Nuevo Video</button>
+        </LinksContainer>
+      </NavStyled>
+      <AddVideoModal isOpen={isModalOpen} onClose={handleCloseModal} />
+    </>
   );
 };
 
