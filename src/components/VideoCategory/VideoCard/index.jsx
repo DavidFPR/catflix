@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import EditIcon from '@mui/icons-material/Edit';
@@ -13,13 +14,7 @@ const CardStyled = styled.article`
   min-width: 100%;
   background-color: var(--card-bg-color);
   border-radius: 8px;
-  border: 2px solid #ff80ab;
-
-  & h2 {
-    font-family: var(--secondary-font);
-    color: #ff80ab;
-    font-size: 18px;
-  }
+  border: 2px solid ${(props) => props.$borderColor || "#ff80ab"}; /* Dynamic border color */
 
   & img {
     border-radius: 8px 8px 0 0;
@@ -36,6 +31,12 @@ const CardInfo = styled.footer`
   align-items: center;
 `;
 
+const TitleStyled = styled.h2`
+  font-family: var(--secondary-font);
+  font-size: 18px;
+  color: ${(props) => props.$titleColor || "#ff80ab"}; /* Dynamic title color */
+`;
+
 const ButtonStyled = styled.button`
   background-color: transparent;
   border: none;
@@ -45,12 +46,17 @@ const ButtonStyled = styled.button`
   }
 `;
 
-const VideoCard = () => {
+const VideoCard = ({ video, $borderColor, $titleColor }) => {
   return (
-    <CardStyled>
-      <img src="https://picsum.photos/200" alt="" />
+    <CardStyled $borderColor={$borderColor}>
+      {/* Dynamically render video thumbnail */}
+      <img src={video.youtubeThumb} alt={video.title} />
+
       <CardInfo>
-        <h2>Titulo video</h2>
+        {/* Dynamically render video title with color */}
+        <TitleStyled $titleColor={$titleColor}>{video.title}</TitleStyled>
+
+        {/* Action buttons */}
         <ButtonStyled>
           <FavoriteBorderIcon fontSize="medium" />
         </ButtonStyled>

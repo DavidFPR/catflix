@@ -1,53 +1,64 @@
 {
-    "categories": [
-      {
-        "name": "Funny Cats",
-        "color": "#FFD700",
-        "videos": [
-          {
-            "title": "Cat Fails Compilation",
-            "youtubeLink": "https://www.youtube.com/watch?v=abc123",
-            "youtubeThumb": "https://img.youtube.com/vi/abc123/hqdefault.jpg"
-          },
-          {
-            "title": "Talking Cats",
-            "youtubeLink": "https://www.youtube.com/watch?v=def456",
-            "youtubeThumb": "https://img.youtube.com/vi/def456/hqdefault.jpg"
-          }
-        ]
-      },
-      {
-        "name": "Cute Cats",
-        "color": "#FF69B4",
-        "videos": [
-          {
-            "title": "Kittens Playing",
-            "youtubeLink": "https://www.youtube.com/watch?v=ghi789",
-            "youtubeThumb": "https://img.youtube.com/vi/ghi789/hqdefault.jpg"
-          },
-          {
-            "title": "Cat Sleeping Moments",
-            "youtubeLink": "https://www.youtube.com/watch?v=jkl012",
-            "youtubeThumb": "https://img.youtube.com/vi/jkl012/hqdefault.jpg"
-          }
-        ]
-      },
-      {
-        "name": "Hero Cats",
-        "color": "#1E90FF",
-        "videos": [
-          {
-            "title": "Cat Saves the Day",
-            "youtubeLink": "https://www.youtube.com/watch?v=mno345",
-            "youtubeThumb": "https://img.youtube.com/vi/mno345/hqdefault.jpg"
-          },
-          {
-            "title": "Brave Cat Rescue",
-            "youtubeLink": "https://www.youtube.com/watch?v=pqr678",
-            "youtubeThumb": "https://img.youtube.com/vi/pqr678/hqdefault.jpg"
-          }
-        ]
-      }
-    ]
-  }
-  
+  "categories": [
+    {
+      "name": "Dumb Cats",
+      "color": "#990000",
+      "videos": [
+        {
+          "title": "Dumb Cat",
+          "youtubeLink": "https://www.youtube.com/watch?v=def456",
+          "youtubeThumb": "https:picsum.photos/200"
+        }
+      ]
+    },
+
+    {
+      "name": "Funny Cats",
+      "color": "#FFD700",
+      "videos": [
+        {
+          "title": "Parrot Annoys Cat",
+          "youtubeLink": "https://www.youtube.com/watch?v=NOpS4qGILyY",
+          "youtubeThumb": "https://img.youtube.com/vi/NOpS4qGILyY/0.jpg"
+        },
+        {
+          "title": "Talking Cats",
+          "youtubeLink": "https://www.youtube.com/watch?v=def456",
+          "youtubeThumb": "https://img.youtube.com/vi/def456/hqdefault.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Cute Cats",
+      "color": "#FF69B4",
+      "videos": [
+        {
+          "title": "Kittens Playing",
+          "youtubeLink": "https://www.youtube.com/watch?v=ghi789",
+          "youtubeThumb": "https://img.youtube.com/vi/ghi789/hqdefault.jpg"
+        },
+        {
+          "title": "Cat Sleeping Moments",
+          "youtubeLink": "https://www.youtube.com/watch?v=jkl012",
+          "youtubeThumb": "https://img.youtube.com/vi/jkl012/hqdefault.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Hero Cats",
+      "color": "#1E90FF",
+      "videos": [
+        {
+          "title": "Cat Saves the Day",
+          "youtubeLink": "https://www.youtube.com/watch?v=mno345",
+          "youtubeThumb": "https://img.youtube.com/vi/mno345/hqdefault.jpg"
+        },
+        {
+          "title": "Brave Cat Rescue",
+          "youtubeLink": "https://www.youtube.com/watch?v=pqr678",
+          "youtubeThumb": "https://img.youtube.com/vi/pqr678/hqdefault.jpg"
+        }
+      ]
+    }
+  ]
+}

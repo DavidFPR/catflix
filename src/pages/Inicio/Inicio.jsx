@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import FooterNav from '../../components/FooterNav'
 import NavBar from '../../components/NavBar';
@@ -18,8 +19,6 @@ const Inicio = () => {
       <NavBar />
       <MainContainer>
         <ChipContainer />
-        <VideoCategory />
-        <VideoCategory />
         <VideoCategory />
       </MainContainer>
       <FooterNav />
