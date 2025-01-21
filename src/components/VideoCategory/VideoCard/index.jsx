@@ -1,7 +1,6 @@
 import { useFavorites } from '../../../FavoritesContext.jsx';
 import styled from 'styled-components';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import EditIcon from '@mui/icons-material/Edit';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const CardStyled = styled.article`

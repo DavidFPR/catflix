@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import VideoCard from './VideoCard'; // Assuming you have a VideoCard component
 
