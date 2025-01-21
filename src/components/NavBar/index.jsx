@@ -4,7 +4,7 @@ import catflixLight from '/assets/img/logo/catflix-light.png';
 const NavStyled = styled.nav`
   width: 100%;
   height: 10vh;
-  background-color: var(--nav-bg-color);
+  background-color: #1E1E1E;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
