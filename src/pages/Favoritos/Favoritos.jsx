@@ -16,7 +16,7 @@ const FavoritosContainer = styled.div`
   gap: 18px;
 
   & h1 {
-    color: #ff5722;
+    color: var(--highlight-text-color);
     text-align: center;
     font-family: var(--secondary-font);
     font-weight: bold;
@@ -24,7 +24,7 @@ const FavoritosContainer = styled.div`
   }
 
   & p {
-    color: #ff5722;
+    color: var(--highlight-text-color);
     font-size: 32px;
   }
 `;

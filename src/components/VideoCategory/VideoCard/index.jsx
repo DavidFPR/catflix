@@ -2,8 +2,6 @@ import { useFavorites } from '../../../FavoritesContext.jsx';
 import styled from 'styled-components';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import EditIcon from '@mui/icons-material/Edit';
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import React, { useState } from 'react';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const CardStyled = styled.article`
@@ -29,7 +27,7 @@ const CardInfo = styled.footer`
   display: flex;
   width: 100%;
   min-height: 30%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 `;
 
@@ -37,11 +35,13 @@ const TitleStyled = styled.h2`
   font-family: var(--secondary-font);
   font-size: 18px;
   color: ${(props) => props.$titleColor || '#ff80ab'}; /* Dynamic title color */
+  margin-left: 12px;
 `;
 
 const ButtonStyled = styled.button`
   background-color: transparent;
   border: none;
+  margin-right: 12px;
 
   & :first-child {
     color: #eaeaea;
@@ -81,12 +81,6 @@ const VideoCard = ({ video, categoryColor }) => {
           {video.title}
         </TitleStyled>
         <FavoriteButton isFavorite={isFavorite} onClick={handleFavoriteClick} />
-        <ButtonStyled>
-          <EditIcon fontSize="medium" />
-        </ButtonStyled>
-        <ButtonStyled>
-          <DeleteForeverIcon fontSize="medium" />
-        </ButtonStyled>
       </CardInfo>
     </CardStyled>
   );
