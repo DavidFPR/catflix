@@ -59,7 +59,7 @@ const LinksContainer = styled.div`
   }
 `;
 
-const NavBar = () => {
+const NavBar = ({ onVideoAdded }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {
@@ -81,7 +81,7 @@ const NavBar = () => {
           <button onClick={handleOpenModal}>Nuevo Video</button>
         </LinksContainer>
       </NavStyled>
-      <AddVideoModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <AddVideoModal isOpen={isModalOpen} onClose={handleCloseModal} onVideoAdded={onVideoAdded} />
     </>
   );
 };

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import FooterNav from '../../components/FooterNav';
 import NavBar from '../../components/NavBar';
@@ -19,18 +19,29 @@ const MainContainer = styled.div`
 
 const Inicio = () => {
   const [activeCategory, setActiveCategory] = useState('Todos');
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/videos')
+      .then((res) => res.json())
+      .then((data) => setVideos(data));
+  }, []);
+
+  const handleVideoAdded = (newVideo) => {
+    setVideos((prevVideos) => [...prevVideos, newVideo]);
+  };
 
   return (
     <>
-      <NavBar />
+      <NavBar onVideoAdded={handleVideoAdded} />
       <MainContainer>
         <ChipContainer
           activeCategory={activeCategory}
           setActiveCategory={setActiveCategory}
         />
-        <VideoCategories activeCategory={activeCategory} />
+        <VideoCategories activeCategory={activeCategory} videos={videos} />
       </MainContainer>
-      <FooterNav />
+      <FooterNav onVideoAdded={handleVideoAdded} />
     </>
   );
 };

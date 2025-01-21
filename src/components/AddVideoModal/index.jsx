@@ -81,7 +81,7 @@ const ModalSelect = styled.select`
   color: #fff;
 `;
 
-const AddVideoModal = ({ isOpen, onClose }) => {
+const AddVideoModal = ({ isOpen, onClose, onVideoAdded }) => {
   const [title, setTitle] = useState('');
   const [thumbnail, setThumbnail] = useState('');
   const [videoSource, setVideoSource] = useState('');
@@ -89,18 +89,14 @@ const AddVideoModal = ({ isOpen, onClose }) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/categories') // Ensure this is correct per your flattened db structure
+    fetch('http://localhost:3000/categories')
       .then((res) => res.json())
-      .then((data) => {
-        console.log('Fetched categories:', data); // Debugging line
-        setCategories(data);
-      });
+      .then((data) => setCategories(data));
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const selectedCategory = categories.find((cat) => cat.name === category);
-    console.log('Selected category:', selectedCategory); // Debugging line
 
     if (!selectedCategory) {
       console.error('Category not found');
@@ -111,19 +107,21 @@ const AddVideoModal = ({ isOpen, onClose }) => {
       title,
       youtubeLink: videoSource,
       youtubeThumb: thumbnail,
-      categoryId: selectedCategory.id, // Use the category ID to link the video correctly
+      categoryId: selectedCategory.id,
     };
 
-    // Update this fetch to use the flattened structure (adjusted API URL)
     fetch(`http://localhost:3000/videos`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(newVideo),
-    }).then(() => {
-      onClose();
-    });
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        onVideoAdded(data); // Notify parent component
+        onClose();
+      });
   };
 
   if (!isOpen) return null;

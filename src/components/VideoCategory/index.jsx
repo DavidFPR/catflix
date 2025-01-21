@@ -21,7 +21,9 @@ const CategoryChip = styled.div`
   align-items: center;
   justify-content: center;
   width: 200px;
+  min-width: fit-content;
   margin: 20px 0;
+  padding: 0 12px;
   
   @media (min-width: 1024px) {
     margin: 30px 0;
@@ -45,19 +47,7 @@ const VideoSwiper = styled.div`
   }
 `;
 
-const VideoCategory = ({ category }) => {
-  const [videos, setVideos] = useState([]);
-
-  useEffect(() => {
-    // Fetch the videos and filter by categoryId
-    fetch('http://localhost:3000/videos')
-      .then((res) => res.json())
-      .then((data) => {
-        const filteredVideos = data.filter((video) => video.categoryId === category.id);
-        setVideos(filteredVideos);
-      });
-  }, [category.id]); // Ensure this updates whenever category changes
-
+const VideoCategory = ({ category, videos }) => {
   return (
     <CategorySection>
       {videos.length > 0 && (

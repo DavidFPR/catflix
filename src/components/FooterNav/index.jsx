@@ -34,7 +34,7 @@ const ButtonStyled = styled.button`
   border: none;
 `;
 
-const FooterNav = () => {
+const FooterNav = ({ onVideoAdded }) => {
   const location = useLocation();
   const highlightColor = '#FF5722';
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -56,7 +56,7 @@ const FooterNav = () => {
               to="/"
               style={{
                 textDecoration: 'none',
-                color: location.pathname === '/' ? highlightColor : '#eaeaea',
+                color: isModalOpen ? '#eaeaea' : (location.pathname === '/' ? highlightColor : '#eaeaea'),
               }}
             >
               <HomeIcon fontSize="large" />
@@ -65,7 +65,7 @@ const FooterNav = () => {
         </div>
         <div>
           <ButtonStyled onClick={handleOpenModal}>
-            <AddCircleIcon fontSize="large" style={{ color: '#eaeaea' }} />
+            <AddCircleIcon fontSize="large" style={{ color: isModalOpen ? 'orange' : '#eaeaea' }} />
           </ButtonStyled>
         </div>
         <div>
@@ -74,10 +74,7 @@ const FooterNav = () => {
               to="/favoritos"
               style={{
                 textDecoration: 'none',
-                color:
-                  location.pathname === '/favoritos'
-                    ? highlightColor
-                    : '#eaeaea',
+                color: isModalOpen ? '#eaeaea' : (location.pathname === '/favoritos' ? highlightColor : '#eaeaea'),
               }}
             >
               <FavoriteIcon fontSize="large" />
@@ -85,7 +82,7 @@ const FooterNav = () => {
           </ButtonStyled>
         </div>
       </SectionStyled>
-      <AddVideoModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <AddVideoModal isOpen={isModalOpen} onClose={handleCloseModal} onVideoAdded={onVideoAdded} />
     </>
   );
 };
