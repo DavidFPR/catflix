@@ -11,6 +11,7 @@ const NavStyled = styled.nav`
   font-family: var(--main-font);
   position: fixed;
   top: 0;
+  z-index: 99;
 
   & img {
     width: 120px;

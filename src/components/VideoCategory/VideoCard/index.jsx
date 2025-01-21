@@ -46,17 +46,12 @@ const ButtonStyled = styled.button`
   }
 `;
 
-const VideoCard = ({ video, $borderColor, $titleColor }) => {
+const VideoCard = ({ video, categoryColor }) => {
   return (
-    <CardStyled $borderColor={$borderColor}>
-      {/* Dynamically render video thumbnail */}
+    <CardStyled style={{ borderColor: categoryColor }}>
       <img src={video.youtubeThumb} alt={video.title} />
-
       <CardInfo>
-        {/* Dynamically render video title with color */}
-        <TitleStyled $titleColor={$titleColor}>{video.title}</TitleStyled>
-
-        {/* Action buttons */}
+        <h2 style={{ color: categoryColor }}>{video.title}</h2>
         <ButtonStyled>
           <FavoriteBorderIcon fontSize="medium" />
         </ButtonStyled>

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import FooterNav from '../../components/FooterNav'
+import FooterNav from '../../components/FooterNav';
 import NavBar from '../../components/NavBar';
-import VideoCategory from '../../components/VideoCategory';
 import ChipContainer from '../../components/ChipContainer';
+import VideoCategories from '../../components/VideoCategories';
 
 const MainContainer = styled.div`
   box-sizing: border-box;
@@ -14,12 +14,17 @@ const MainContainer = styled.div`
 `;
 
 const Inicio = () => {
+  const [activeCategory, setActiveCategory] = useState('Todos');
+
   return (
     <>
       <NavBar />
       <MainContainer>
-        <ChipContainer />
-        <VideoCategory />
+        <ChipContainer
+          activeCategory={activeCategory}
+          setActiveCategory={setActiveCategory}
+        />
+        <VideoCategories activeCategory={activeCategory} />
       </MainContainer>
       <FooterNav />
     </>
