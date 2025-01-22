@@ -18,7 +18,8 @@ const NavStyled = styled.nav`
 
   @media (min-width: 1024px) {
     justify-content: space-between;
-    padding: 0 20px;
+    box-sizing: border-box;
+    padding: 0 5%;
   }
 
   & img {
@@ -59,7 +60,7 @@ const LinksContainer = styled.div`
   }
 `;
 
-const NavBar = ({ onVideoAdded }) => {
+const NavBar = ({ onVideoAdded, location }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {

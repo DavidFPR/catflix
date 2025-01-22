@@ -29,7 +29,8 @@ const CardStyled = styled.article`
   }
 
   @media (min-width: 1024px) {
-    min-width: 20%; /* Adjust width for larger desktops */
+    min-width: 0;
+    width: 20%;
   }
 `;
 

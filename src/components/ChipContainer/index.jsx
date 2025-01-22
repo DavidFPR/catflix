@@ -12,6 +12,8 @@ const ChipContainerStyled = styled.div`
   @media (min-width: 1024px) {
     justify-content: flex-end;
     overflow-x: hidden;
+    box-sizing: border-box;
+    padding: 0 10vh;
   }
 `;
 

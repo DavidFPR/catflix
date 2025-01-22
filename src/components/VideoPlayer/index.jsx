@@ -2,21 +2,23 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Modal = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  z-index: 1000;
 `;
 
 const VideoContainer = styled.div`
   position: relative;
   width: 80%;
-  height: 80%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
   background: #000;
 `;
 

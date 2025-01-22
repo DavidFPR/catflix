@@ -134,21 +134,21 @@ const AddVideoModal = ({ isOpen, onClose, onVideoAdded }) => {
         <ModalForm onSubmit={handleSubmit}>
           <ModalInput
             type="text"
-            placeholder="Title"
+            placeholder="Título"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
           />
           <ModalInput
             type="text"
-            placeholder="Thumbnail URL"
+            placeholder="URL de Miniatura"
             value={thumbnail}
             onChange={(e) => setThumbnail(e.target.value)}
             required
           />
           <ModalInput
             type="text"
-            placeholder="Video Source URL"
+            placeholder="URL de Video"
             value={videoSource}
             onChange={(e) => setVideoSource(e.target.value)}
             required
@@ -159,7 +159,7 @@ const AddVideoModal = ({ isOpen, onClose, onVideoAdded }) => {
             required
           >
             <option value="" disabled>
-              Select Category
+              Elegir Categoría
             </option>
             {categories.map((cat) => (
               <option key={cat.name} value={cat.name}>

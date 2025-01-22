@@ -9,7 +9,10 @@ const CategorySection = styled.section`
   width: 100%;
 
   @media (min-width: 1024px) {
-    margin: 50px 24px;
+
+    margin: 0 0 15vh 0;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -26,7 +29,9 @@ const CategoryChip = styled.div`
   padding: 0 12px;
   
   @media (min-width: 1024px) {
-    margin: 30px 0;
+    margin: 10vh 0;
+    width: 90%;
+    padding: 0;
   }
 `;
 
@@ -43,7 +48,8 @@ const VideoSwiper = styled.div`
     overflow-x: hidden;
     gap: 48px;
     max-height: none;
-    justify-content: flex-start;
+    justify-content: space-between;
+    width: 90%;
   }
 `;
 

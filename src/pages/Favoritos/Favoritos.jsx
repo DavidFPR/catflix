@@ -9,16 +9,16 @@ const FavoritosContainer = styled.div`
   width: 100%;
   height: auto;
   padding: 10vh 18px;
-  display: flex;
   flex-direction: column;
   align-items: center;
   font-family: var(--main-font);
   gap: 18px;
 
+
   @media (min-width: 1024px) {
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
   }
 
   & h1 {
@@ -39,7 +39,24 @@ const HeaderContainer = styled.div`
   width: 100%;
   text-align: center;
   margin-bottom: 20px;
+
+   @media (min-width: 1024px) {
+    margin-bottom: 10vh;
+   }
 `;
+
+const VideoContainer = styled.div`
+  
+@media (min-width: 1024px){
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding:  0 5% ;
+
+}
+
+`
 
 const Favoritos = () => {
   const { favorites } = useFavorites();
@@ -51,14 +68,17 @@ const Favoritos = () => {
         <h1>Encuentra aquí tus videos favoritos</h1>
         {favorites.length === 0 && <p>No hay videos favoritos.</p>}
       </HeaderContainer>
-      {favorites.length > 0 &&
-        favorites.map((video) => (
-          <VideoCard
-            key={video.youtubeLink}
-            video={video}
-            categoryColor="#FFD700"
-          />
-        ))}
+      <VideoContainer>
+        {favorites.length > 0 &&
+          favorites.map((video) => (
+            <VideoCard
+              key={video.youtubeLink}
+              video={video}
+              categoryColor="#FFD700"
+            />
+          ))}
+      </VideoContainer>
+
       <FooterNav />
     </FavoritosContainer>
   );
