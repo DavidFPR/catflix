@@ -8,7 +8,7 @@ const FavoritosContainer = styled.div`
   box-sizing: border-box;
   width: 100%;
   height: auto;
-  padding: 10vh 18px;
+  padding: 10vh 0;
   flex-direction: column;
   align-items: center;
   font-family: var(--main-font);
@@ -19,6 +19,7 @@ const FavoritosContainer = styled.div`
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 10vh 0;
   }
 
   & h1 {
